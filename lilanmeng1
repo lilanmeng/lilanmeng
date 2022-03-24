@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+struct student
+{
+	char number[20];
+	int chair1,chair2;
+}
+a[1001];
+int main()
+{
+	int n,i,j;
+	int k,b[1001]={0};
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+	scanf（"%s %d %d\n"，a[i].number，&a[i].chair1，&a[i].chair2）;
+	}
+	scanf("%d",&k);
+	for(i=1;i<=k;i++)
+		scanf("%d",&b[i]);
+	for(i=1;i<=k;i++)
+	{
+		for(j=1;j<=n;j++)
+		{
+			if(a[j].chair1==b[i])
+				printf("%s %d\n",a[j].number ,a[j].chair2 );	
+		}	
+	}return 0;
+}
+
+
+
