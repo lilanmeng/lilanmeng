@@ -1,32 +1,32 @@
-#include<stdio.h>
-#include<string.h>
-struct student
-{
-	char number[20];
-	int chair1,chair2;
-}
-a[1001];
+#include <stdio.h>
+#include <string.h>
 int main()
 {
-	int n,i,j;
-	int k,b[1001]={0};
-	scanf("%d",&n);
-	for(i=1;i<=n;i++)
+	int c,d,e,f=0,g,h=0;
+	char a[1000],b[1000];
+	printf("输入你需要查询的句子。\n请输入：\n");
+	gets(a);
+	strlwr(a);
+	c=strlen(a);
+	printf("\n输入你需要查询的单词。\n请输入：\n");
+	gets(b);
+	strlwr(b);
+	d=strlen(b);
+	for(e=0;e<c;e++)
 	{
-	scanf（"%s %d %d\n"，a[i].number，&a[i].chair1，&a[i].chair2）;
-	}
-	scanf("%d",&k);
-	for(i=1;i<=k;i++)
-		scanf("%d",&b[i]);
-	for(i=1;i<=k;i++)
-	{
-		for(j=1;j<=n;j++)
+		for(g=0;g<d;g++)
 		{
-			if(a[j].chair1==b[i])
-				printf("%s %d\n",a[j].number ,a[j].chair2 );	
-		}	
-	}return 0;
-}
-
-
-
+			if(a[e+g]==b[g])
+			{
+				if(g+1==d)
+				{
+					h++;
+				}
+				continue;
+			}
+			break;
+		}
+	}
+	printf("\n该句子有：%d个%s\n",h,b);
+	return 0;
+} 
